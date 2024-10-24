@@ -7,6 +7,7 @@ $role = $_SESSION['role'];
 
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" type="text/css" href="../style/add_user.css">
 <head>
     <title>Ajouter un utilisateur</title>
 </head>

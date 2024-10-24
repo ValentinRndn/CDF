@@ -18,6 +18,7 @@ $result = $stmt->get_result();
 
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" type="text/css" href="../style/views_users.css">
 <head>
     <title>Liste des utilisateurs</title>
     <style>
@@ -32,10 +33,6 @@ $result = $stmt->get_result();
             text-align: left;
         }
 
-        th {
-            background-color: #333;
-            color: white;
-        }
     </style>
 </head>
 <body>

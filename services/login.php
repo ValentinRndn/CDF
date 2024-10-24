@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Stocke l'ID et le rôle de l'utilisateur dans la session
             $_SESSION['user_id'] = $userId;
             $_SESSION['role'] = $role;
-            header("Location: dashboard.php"); // Redirige vers une page sécurisée
+            header("Location: view_users.php"); // Redirige vers une page sécurisée
             exit();
         } else {
             echo "Mot de passe incorrect.";

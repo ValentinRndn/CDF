@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'University';
+    src: url('../assets/fonts/University.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #00022C;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+    text-align: center;
+}
+
+input {
+    background-color: #022D52;
+    border: none;
+    padding: 14px;
+    color: white; 
+    width: 20vw;
+}
+
+button {
+    background-color: #022D52;
+    border: none;
+    padding: 14px;
+    color: white; 
+    width: fit-content;
+    cursor: pointer;
+}
+
+tr {
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    gap: 2rem;
+}
+
+th {
+    background-color: #022D52;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

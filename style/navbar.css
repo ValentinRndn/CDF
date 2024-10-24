@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'University';
+    src: url('../assets/fonts/University.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 10em;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    font-family: 'University', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 4px solid grey;
+    background-color: #00022C;
+    width: 100%;
+}
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+   
+        padding: 14px 20px;
+        display: block;
+    }
+
+    .navbar a:hover {
+        background-color: #575757;
+    }
