@@ -1,12 +1,7 @@
 <?php
-session_start();
-require 'db.php';
-
-// Vérifie si l'utilisateur est connecté
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['role'])) {
-    header("Location: login.html");
-    exit();
-}
+include 'navbar.php'; // Inclut la navbar au début de la page
+include 'db.php'; // Inclut la connexion à la base de données
+// Récupère le rôle de l'utilisateur connecté
 
 // Récupère l'ID de l'utilisateur à afficher
 $userId = $_GET['id'];
@@ -25,6 +20,7 @@ if (!$user) {
 
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" type="text/css" href="../style/view_user.css">
 <head>
     <title>Voir l'utilisateur</title>
 </head>

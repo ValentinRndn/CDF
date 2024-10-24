@@ -19,6 +19,7 @@ if (!$user) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../style/edit_user.css">
     <title>Modifier l'utilisateur</title>
 </head>
 <body>

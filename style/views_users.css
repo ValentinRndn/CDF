@@ -5,40 +5,47 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Tommy';
+    src: url('../assets/fonts/tommy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #00022C;
-    
 }
 
 h1 {
     color: white;
-    font-size: 2em;
+    font-size: 1.3em;
     margin: 20px;
     text-align: center;
+    font-family: 'University', sans-serif;
 }
 
 input {
     background-color: #022D52;
     border: none;
     padding: 14px;
-    color: white; 
+    color: white;
     width: 20vw;
+}
+
+input::placeholder {
+    color: #899EAF;
 }
 
 button {
     background-color: #022D52;
     border: none;
     padding: 14px;
-    color: white; 
+    color: #899EAF;
     width: fit-content;
     cursor: pointer;
-}
-
-tr {
-    color: white;
 }
 
 body {
@@ -51,12 +58,43 @@ body {
     gap: 2rem;
 }
 
+table {
+    border-collapse: collapse;
+    width: 90%;
+    font-family: 'Tommy', sans-serif;
+
+}
+
+th {
+    padding: 12px;
+    text-align: left;  
+}
+ td {
+    border-bottom: 1px solid #899EAF; /* Bordure en bas */
+    padding: 12px;
+    text-align: left;
+}
+
 th {
     background-color: #022D52;
     color: white;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+/* Supprime les bordures latérales */
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+
+table a {
+    text-decoration: none;
+    color: white;
+}
+
+table a:hover {
+    color: #899EAF;
 }

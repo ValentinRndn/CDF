@@ -1,6 +1,7 @@
+
 @font-face {
-    font-family: 'University';
-    src: url('../assets/fonts/University.otf') format('opentype');
+    font-family: 'Tommy';
+    src: url('../assets/fonts/tommy.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,24 +18,25 @@ img {
 }
 
 .navbar {
-    font-family: 'University', sans-serif;
+    font-family: 'Tommy', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 4px solid grey;
+    border-bottom: 4px solid #899EAF;
     background-color: #00022C;
     width: 100%;
+    font-size: 1.2rem;
 }
 
     .navbar a {
         color: white;
         text-decoration: none;
-   
-        padding: 14px 20px;
         display: block;
     }
 
     .navbar a:hover {
-        background-color: #575757;
+        color: #899EAF
     }
+
+    

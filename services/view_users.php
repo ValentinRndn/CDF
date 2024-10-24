@@ -22,16 +22,7 @@ $result = $stmt->get_result();
 <head>
     <title>Liste des utilisateurs</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
 
     </style>
 </head>
