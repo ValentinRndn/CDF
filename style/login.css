@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'University';
+    src: url('../assets/fonts/University.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utilisation de :root pour définir les variables CSS */
+:root {
+    --color-primary: #00022C;
+    --color-secondary: #022D52;
+    --color-tertiary: #899EAF;
+    --color-quaternary: #6a2c70;
+    --color-quinary: #3d155f;
+}
+
+body {
+    font-family: 'University', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    gap: 4rem;
+
+}
+
+body > img {
+    width: 25em;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.form-container input {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 7px;
+    color: white; 
+    width: 20vw;
+}
+
+.form-container input::placeholder {
+    color: var(--color-tertiary); 
+    opacity: 1; 
+    font: semibold;
+    font-size: 15px;
+}
+
+.form-container input:focus {
+    outline: none;
+}
+
+
+
+.form-container button {
+    font-family: 'University', sans-serif;
+    background-color: transparent; /* Changez pour la couleur que vous préférez */
+    color: white;
+    border: none; /* Enlève la bordure par défaut */
+    padding: 10px 10px; /* Ajoute un peu de padding pour rendre le bouton plus grand */
+    cursor: pointer; /* Change le curseur quand on survole le bouton */
+    border-radius: 5px; /* Ajoute des coins arrondis (facultatif) */
+    text-align: center;
+    display: block; /* Assure que le bouton prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    font-size: 16px; /* Ajuste la taille du texte */
+}
+
+.form-container button:hover {
+    background-color: var(--color-secondary); /* Couleur au survol */
+}
