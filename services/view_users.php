@@ -1,12 +1,19 @@
 <?php
 include 'navbar.php'; // Inclut la navbar au début de la page
 include 'db.php'; // Inclut la connexion à la base de données
-
 // Récupère le rôle de l'utilisateur connecté
 $role = $_SESSION['role'];
 
-// Récupération de tous les utilisateurs
-$result = $conn->query("SELECT * FROM users");
+// Récupère le terme de recherche s'il est défini
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Préparation de la requête SQL pour filtrer les utilisateurs en fonction du terme de recherche
+$sql = "SELECT * FROM users WHERE pseudo LIKE ? OR corpo LIKE ? OR id LIKE ? OR status LIKE ?";
+$stmt = $conn->prepare($sql);
+$searchTerm = "%" . $search . "%";
+$stmt->bind_param("ssss", $searchTerm, $searchTerm, $searchTerm, $searchTerm);
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +40,12 @@ $result = $conn->query("SELECT * FROM users");
 </head>
 <body>
     <h1>Liste des utilisateurs</h1>
+    <form method="GET" action="view_users.php">
+        <input type="text" name="search" placeholder="Rechercher par pseudo, corpo, ID ou status" value="<?php echo htmlspecialchars($search); ?>">
+        <button type="submit">Rechercher</button>
+    </form>
+    <br>
+
     <table>
         <thead>
             <tr>
