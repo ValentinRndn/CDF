@@ -112,3 +112,19 @@ table a {
 table a:hover {
     color: #899EAF;
 }
+
+
+#status-mechant {
+    color: #FF0000;
+    padding: 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+#status-gentil {
+    color: #00FF00;
+    padding: 10px;
+    border-radius: 4px;
+    width: fit-content;
+
+}

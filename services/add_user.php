@@ -13,12 +13,18 @@ $role = $_SESSION['role'];
 </head>
 <body>
     <h1>Ajouter un utilisateur</h1>
-    <form action="process_add_user.php" method="POST">
+    <form action="process_add_user.php" id="addUserForm" method="POST">
         <label for="pseudo">Pseudo :</label>
         <input type="text" id="pseudo" name="pseudo" required><br><br>
 
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required><br><br>
+
+        <label for="wanted">Wanted :</label>
+            <select id="wanted" name="wanted" required>
+                <option value="0">Gentil</option>
+                <option value="1">Méchant</option>
+            </select><br><br>
 
         <label for="status">Status :</label>
         <input type="text" id="status" name="status" required><br><br>
@@ -45,3 +51,10 @@ $role = $_SESSION['role'];
     </form>
 </body>
 </html>
+<script>
+    document.getElementById('addUserForm').addEventListener('submit', function() {
+        alert('Utilisateur créé avec succès.');
+    });
+</script>
+
+<?php include 'footer.php'; ?>

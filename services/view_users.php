@@ -40,6 +40,7 @@ $result = $stmt->get_result();
                 <th>ID</th>
                 <th>Pseudo</th>
                 <th>Role</th>
+                <th>Wanted</th>
                 <th>Status</th>
                 <th>Corpo</th>
                 <th>Divers</th>
@@ -53,6 +54,9 @@ $result = $stmt->get_result();
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['pseudo']; ?></td>
                     <td><?php echo $row['role']; ?></td>
+                    <td id="<?php echo $row['wanted'] ? 'status-mechant' : 'status-gentil'; ?>">
+                    <?php echo $row['wanted'] ? 'Méchant' : 'Gentil'; ?>
+                    </td>
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['corpo']; ?></td>
                     <td><?php echo $row['divers']; ?></td>
@@ -70,3 +74,4 @@ $result = $stmt->get_result();
     </table>
 </body>
 </html>
+<?php include 'footer.php'; ?>

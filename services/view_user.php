@@ -37,12 +37,13 @@ if (!$user) {
         <h1>Informations de l'utilisateur</h1>
         <p><strong>Pseudo :</strong> <?php echo $user['pseudo']; ?></p>
         <p><strong>Role :</strong> <?php echo $user['role']; ?></p>
+        <p><strong>Wanted : </strong> <?php echo $user['wanted'] ? 'Méchant' : 'Gentil'; ?></p>
         <p><strong>Status :</strong> <?php echo $user['status']; ?></p>
         <p><strong>Corpo :</strong> <?php echo $user['corpo']; ?></p>
         <p><strong>Divers :</strong> <?php echo $user['divers']; ?></p>
         <p><strong>Date de création :</strong> <?php echo $user['created_at']; ?></p>
 
-        <h2>Casier Judiciaire</h2>
+        <p><strong>Casier Judiciaire :</p>
         <form action="update_locker.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $userId; ?>">
 
@@ -60,3 +61,4 @@ if (!$user) {
     </div>
 </body>
 </html>
+<?php include 'footer.php'; ?>
