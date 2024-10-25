@@ -43,10 +43,14 @@ button {
     background-color: #022D52;
     border: none;
     padding: 14px;
-    color: #899EAF;
+    color: white;
     width: fit-content;
     cursor: pointer;
 }
+
+ button:hover {
+    color: #899EAF;
+ }
 
 body {
     display: flex;
