@@ -45,16 +45,18 @@ if (!$user) {
         <h2>Casier Judiciaire</h2>
         <form action="update_locker.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $userId; ?>">
-            <!-- Affiche les informations existantes, mais les joueurs peuvent écrire en dessous -->
-            <textarea name="locker" rows="10" cols="50" placeholder="Ajoutez des informations ici"><?php if ($role === 'admin') echo htmlspecialchars($user['locker']); ?></textarea><br><br>
-            <?php if ($role === 'admin' || $role === 'player'): ?>
+
+            <pre><?php echo htmlspecialchars($user['locker']); ?></pre>
+
+            <?php if ($role === 'admin'): ?>
+                <textarea name="locker" rows="10" cols="50"><?php echo htmlspecialchars($user['locker']); ?></textarea><br><br>
                 <button type="submit">Mettre à jour le casier judiciaire</button>
+            <?php elseif ($role === 'player'): ?>
+                <p style="margin-top: 20px;">Ajouter des délits :</p>
+                <textarea name="locker" rows="10" cols="50" placeholder="Ajoutez des informations ici"></textarea><br><br>
+                <button type="submit">Ajouter au casier judiciaire</button>
             <?php endif; ?>
         </form>
-        <?php if ($role === 'player'): ?>
-            <p style="margin-top: 20px;">Les informations existantes : </p>
-            <pre style="background-color: #1B2B48; padding: 10px; border-radius: 4px;"><?php echo htmlspecialchars($user['locker']); ?></pre>
-        <?php endif; ?>
     </div>
 </body>
 </html>
