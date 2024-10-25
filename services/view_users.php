@@ -37,7 +37,11 @@ $result = $stmt->get_result();
     <table>
         <thead>
             <tr>
+            <?php if ($role === 'admin'): ?>
+
                 <th>ID</th>
+
+                <?php endif; ?>
                 <th>Pseudo</th>
                 <th>Role</th>
                 <th>Wanted</th>
@@ -51,7 +55,10 @@ $result = $stmt->get_result();
         <tbody>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
+                <?php if ($role === 'admin'): ?>
+
                     <td><?php echo $row['id']; ?></td>
+                    <?php endif; ?>
                     <td><?php echo $row['pseudo']; ?></td>
                     <td><?php echo $row['role']; ?></td>
                     <td id="<?php echo $row['wanted'] ? 'status-mechant' : 'status-gentil'; ?>">
