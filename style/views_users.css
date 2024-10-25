@@ -33,11 +33,20 @@ input {
     padding: 14px;
     color: white;
     width: 20vw;
+    transition: border-color 0.3s ease;
+
 }
 
 input::placeholder {
     color: #899EAF;
 }
+
+input:focus, select:focus {
+    border-color: #899EAF;
+    outline: none;
+}
+
+
 
 button {
     background-color: #022D52;
@@ -97,6 +106,7 @@ th:last-child, td:last-child {
 table a {
     text-decoration: none;
     color: white;
+    text-decoration: underline;
 }
 
 table a:hover {

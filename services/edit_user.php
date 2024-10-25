@@ -1,7 +1,9 @@
 <?php
 include 'navbar.php'; // Inclut la navbar au début de la page
-include 'db.php'; // Inclut la connexion à la base de données
-// Récupère l'ID de l'utilisateur à modifier
+include 'db.php'; // Connexion à la base de données
+
+
+// Récupère l'ID de l'utilisateur à éditer
 $userId = $_GET['id'];
 
 // Récupère les informations de l'utilisateur depuis la base de données
@@ -19,36 +21,41 @@ if (!$user) {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../style/edit_user.css">
     <title>Modifier l'utilisateur</title>
+    <link rel="stylesheet" type="text/css" href="../style/edit_user.css">
 </head>
 <body>
-    <h1>Modifier l'utilisateur</h1>
-    <form action="update_user.php" method="POST">
-        <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+    <div class="container">
+        <h1>Modifier l'utilisateur</h1>
+        <form action="process_edit_user.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $userId; ?>">
+            
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" value="<?php echo htmlspecialchars($user['pseudo']); ?>" required><br><br>
 
-        <label for="pseudo">Pseudo :</label>
-        <input type="text" id="pseudo" name="pseudo" value="<?php echo $user['pseudo']; ?>" required><br><br>
+            <label for="password">Nouveau mot de passe :</label>
+            <input type="password" id="password" name="password" placeholder="Laissez vide si inchangé"><br><br>
 
-        <label for="password">Nouveau mot de passe :</label>
-        <input type="password" id="password" name="password"><br><br>
+            <label for="status">Status :</label>
+            <input type="text" id="status" name="status" value="<?php echo htmlspecialchars($user['status']); ?>" required><br><br>
 
-        <label for="role">Rôle :</label>
-        <select id="role" name="role" required>
-            <option value="player" <?php if ($user['role'] === 'player') echo 'selected'; ?>>Player</option>
-            <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Admin</option>
-        </select><br><br>
+            <label for="corpo">Corpo :</label>
+            <input type="text" id="corpo" name="corpo" value="<?php echo htmlspecialchars($user['corpo']); ?>" required><br><br>
 
-        <label for="status">Status :</label>
-        <input type="text" id="status" name="status" value="<?php echo $user['status']; ?>" required><br><br>
+            <label for="divers">Divers :</label>
+            <input type="text" id="divers" name="divers" value="<?php echo htmlspecialchars($user['divers']); ?>" required><br><br>
 
-        <label for="corpo">Corpo :</label>
-        <input type="text" id="corpo" name="corpo" value="<?php echo $user['corpo']; ?>" required><br><br>
+            <label for="role">Rôle :</label>
+            <select id="role" name="role" required>
+                <option value="player" <?php if ($user['role'] === 'player') echo 'selected'; ?>>Player</option>
+                <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Admin</option>
+            </select><br><br>
 
-        <label for="divers">Divers :</label>
-        <input type="text" id="divers" name="divers" value="<?php echo $user['divers']; ?>" required><br><br>
+            <label for="locker">Casier Judiciaire :</label>
+            <textarea id="locker" name="locker" rows="10" cols="50"><?php echo htmlspecialchars($user['locker']); ?></textarea><br><br>
 
-        <button type="submit">Mettre à jour l'utilisateur</button>
-    </form>
+            <button type="submit">Mettre à jour l'utilisateur</button>
+        </form>
+    </div>
 </body>
 </html>
