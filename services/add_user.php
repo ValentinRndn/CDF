@@ -22,8 +22,8 @@ $role = $_SESSION['role'];
 
         <label for="wanted">Wanted :</label>
             <select id="wanted" name="wanted" required>
-                <option value="0">Gentil</option>
-                <option value="1">Méchant</option>
+                <option value="0">Innocent</option>
+                <option value="1">Traqué</option>
             </select><br><br>
 
         <label for="status">Status :</label>

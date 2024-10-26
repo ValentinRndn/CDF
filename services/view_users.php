@@ -42,14 +42,16 @@ $result = $stmt->get_result();
                 <th>ID</th>
 
                 <?php endif; ?>
-                <th>Pseudo</th>
-                <th>Role</th>
-                <th>Wanted</th>
-                <th>Status</th>
-                <th>Corpo</th>
-                <th>Divers</th>
-                <th>Date de création</th>
-                <th>Action</th>
+                <th>PSEUDO</th>
+                <th>ROLE</th>
+                <th>RECHERCHÉ</th>
+                <th>STATUT</th>
+                <th>CORPORATION</th>
+                <th>DIVERS</th>
+                <?php if ($role === 'admin'): ?>
+                <th>DATE DE CRÉATION</th>
+                <?php endif; ?>
+                <th>ACTION</th>
             </tr>
         </thead>
         <tbody>
@@ -62,12 +64,14 @@ $result = $stmt->get_result();
                     <td><?php echo $row['pseudo']; ?></td>
                     <td><?php echo $row['role']; ?></td>
                     <td id="<?php echo $row['wanted'] ? 'status-mechant' : 'status-gentil'; ?>">
-                    <?php echo $row['wanted'] ? 'Méchant' : 'Gentil'; ?>
+                    <?php echo $row['wanted'] ? 'Traqué' : 'Innocent'; ?>
                     </td>
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['corpo']; ?></td>
                     <td><?php echo $row['divers']; ?></td>
+                    <?php if ($role === 'admin'): ?>
                     <td><?php echo $row['created_at']; ?></td>
+                    <?php endif; ?>
                     <td>
                         <?php if ($role === 'admin'): ?>
                             <a href="edit_user.php?id=<?php echo $row['id']; ?>">Modifier</a>

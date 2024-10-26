@@ -37,7 +37,7 @@ if (!$user) {
         <h1>Informations de l'utilisateur</h1>
         <p><strong>Pseudo :</strong> <?php echo $user['pseudo']; ?></p>
         <p><strong>Role :</strong> <?php echo $user['role']; ?></p>
-        <p><strong>Wanted : </strong> <?php echo $user['wanted'] ? 'Méchant' : 'Gentil'; ?></p>
+        <p><strong>Wanted : </strong> <?php echo $user['wanted'] ? 'Traqué' : 'Innocent'; ?></p>
         <p><strong>Status :</strong> <?php echo $user['status']; ?></p>
         <p><strong>Corpo :</strong> <?php echo $user['corpo']; ?></p>
         <p><strong>Divers :</strong> <?php echo $user['divers']; ?></p>

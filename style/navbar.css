@@ -13,8 +13,9 @@
 }
 
 img {
-    width: 10em;
-    margin-bottom: 20px;
+    width:25em;
+    margin-bottom: -100px;
+
 }
 
 .navbar {
@@ -23,7 +24,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 4px solid #899EAF;
+    border-bottom: 8px solid #616D49;
     background-color: #00022C;
     width: 100%;
     font-size: 1.2rem;

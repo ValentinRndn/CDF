@@ -51,8 +51,8 @@ if (!$user) {
 
             <label for="wanted">Wanted :</label>
             <select id="wanted" name="wanted" required>
-                <option value="0" <?php if ($user['wanted'] == 0) echo 'selected'; ?>>Gentil</option>
-                <option value="1" <?php if ($user['wanted'] == 1) echo 'selected'; ?>>Méchant</option>
+                <option value="0" <?php if ($user['wanted'] == 0) echo 'selected'; ?>>Innocent</option>
+                <option value="1" <?php if ($user['wanted'] == 1) echo 'selected'; ?>>Traqué</option>
             </select><br><br>
 
             <label for="role">Rôle :</label>
