@@ -1,6 +1,6 @@
 # CDF PANEL (https://cdf-panel.com/)
 
-Bienvenue dans **CDF PANEL**, une application qui permet répertorie tous les joueurs d'un jeu avec leurs infos complémentaires. Il s'agit d'une application à but communautaire, elle est alimentée par les joueurs eux-mêmes.
+Bienvenue dans **CDF PANEL**, une application qui répertorie tous les joueurs d'un jeu avec leurs infos complémentaires. Il s'agit d'une application à but communautaire, elle est alimentée par les joueurs eux-mêmes.
 
 ## Fonctionnalités
 
