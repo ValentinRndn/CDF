@@ -17,7 +17,7 @@ Bienvenue dans **CDF PANEL**, une application qui répertorie tous les joueurs d
   - `db.php` : Fichier de configuration de la base de données pour gérer la connexion.
   - `login.php` : Script de traitement de la connexion utilisateur.
   - `logout.php` : Script de déconnexion de l'utilisateur.
-  - `autre fichierse` : Tous les scripts nécessaires au CRUD de l'application
+  - `autre fichiers` : Tous les scripts nécessaires au CRUD de l'application
 - **style/** : Dossier des styles CSS pour les différentes parties de l'application.
 
 - **assets/** : Contient les fichiers statiques, comme les images et les logos.
